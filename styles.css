@@ -17,7 +17,6 @@
     display: grid;
     grid-template-columns: 1fr 13fr;
     grid-column: 1 / 3;
-    grid-row: 1 / 2;
     margin-left: 40px;
 }
 
@@ -30,10 +29,65 @@
     font-size: 50px;
 }
 
-.main {
+.book-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 4fr;
+    padding: 20px;
+    border: 1px solid green;
+}
+
+.book-container .readHeader {
     grid-column: 1 / 2;
+    align-self: center;
+    text-align: center;
+}
+
+.book-container .notReadHeader {
+    grid-column: 2 / 3;
+    align-self: center;
+    text-align: center;
+}
+
+.book-container .booksRead {
     grid-row: 2 / 3;
+    padding: 10px;
+    border: 1px solid green;
+    contain: size;
+    overflow: auto;
+}
+
+.book-container .notRead {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    padding: 10px;
+    border: 1px solid green;
+    contain: size;
+    overflow: auto;
+}
+
+.book-container .booksRead .book {
+    display: grid;
     border: 1px solid blue;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.book-container .booksRead button {
+    width: 50px;
+    margin-left: auto;
+}
+
+.book-container .notRead .book {
+    display: grid;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+    padding: 10px;  
+}
+
+.book-container .notRead button {
+    width: 50px;
+    margin-left: auto;
 }
 
 .sidebar {
@@ -43,7 +97,6 @@
     grid-template-rows: repeat(5, 1fr);
     padding: 25px;
     align-self: self-start;
-    border: 1px solid green;
 }
 
 .sidebar .caption {
@@ -67,4 +120,11 @@
 
 .sidebar .radioButtons input {
     height: auto;
+}
+
+.sidebar #add {
+    width: 100px;
+    grid-column: 2 / 3;
+    height: 50px;
+    margin-left: auto;
 }
