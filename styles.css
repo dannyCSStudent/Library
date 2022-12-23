@@ -10,7 +10,10 @@
     width: 100vw;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 10fr;
-    border: 1px solid black;
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #202124;
+    color: #ffffff;
+    padding: 1rem;
 }
 
 .header {
@@ -34,25 +37,24 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .5fr 4fr;
     padding: 20px;
-    border: 1px solid green;
+    gap: 1rem;
 }
 
 .book-container .readHeader {
     grid-column: 1 / 2;
-    align-self: center;
+    align-self: end;
     text-align: center;
 }
 
 .book-container .notReadHeader {
     grid-column: 2 / 3;
-    align-self: center;
+    align-self: end;
     text-align: center;
 }
 
 .book-container .booksRead {
     grid-row: 2 / 3;
     padding: 10px;
-    border: 1px solid green;
     contain: size;
     overflow: auto;
 }
@@ -61,33 +63,45 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     padding: 10px;
-    border: 1px solid green;
     contain: size;
     overflow: auto;
 }
 
 .book-container .booksRead .book {
     display: grid;
-    border: 1px solid blue;
+    border: 1px solid lime;
     margin-bottom: 10px;
     padding: 10px;
 }
 
-.book-container .booksRead button {
-    width: 50px;
+.book-container button {
+    height: 25px;
+    width: 25px;
     margin-left: auto;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    background-color: #000000;
+
 }
 
 .book-container .notRead .book {
     display: grid;
-    border: 1px solid blue;
+    border: 1px solid #ff0000;
     margin-bottom: 10px;
     padding: 10px;  
 }
 
-.book-container .notRead button {
-    width: 50px;
-    margin-left: auto;
+.book-container .notRead 
+.book .button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.book-container .notRead 
+.book .button-container
+.btn_read {
+    color: #00ff00;
 }
 
 .sidebar {
@@ -116,6 +130,22 @@
     margin-left: 10px;
     margin-bottom: 15px;
     height: 30px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.sidebar .radioButtons input {
+    height: auto;
+}
+
+.sidebar #add {
+    width: 100px;
+    grid-column: 2 / 3;
+    height: 50px;
+    margin-left: auto;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 .sidebar .radioButtons input {
