@@ -124,6 +124,7 @@
     font-size: 20px;
     margin-left: auto;
     margin-bottom: 15px;
+    white-space: nowrap;
 }
 
 .sidebar input {
