@@ -28,12 +28,22 @@ const bookThree = {
     r : false
 }
 
-function Book (ti, au, paCo, re) {
-    this.title = ti;
-    this.author = au;
-    this.pageCount = paCo;
-    this.isRead = re;
+// function Book (ti, au, paCo, re) {
+//     this.title = ti;
+//     this.author = au;
+//     this.pageCount = paCo;
+//     this.isRead = re;
+// }
+class Book {
+    constructor (ti, au, paCo, re) {
+        this.title = ti;
+        this.author = au;
+        this.pageCount = paCo;
+        this.isRead = re;
+    }
 }
+
+
 
 const loadBooks = () => {
     for (let j = 0; j < myLibrary.length; j++) {
@@ -90,8 +100,6 @@ const addBook = (bk) => {
         <p>${bk.pageCount} pages</p>
         ${x}
     </div>` + fetch;
-    console.log(bk);
-    console.log(i)
     i++;
 }
 
